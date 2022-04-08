@@ -30,7 +30,7 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
-    var _selectType = ["Mentee", "Mentor/Teacher"];
+    var _selectType = ["mentee", "mentor/teacher"];
     return Scaffold(
       body: Container(
         width: Get.size.width,
