@@ -17,7 +17,6 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   late String _currentSelectedValue;
-
   get newValue => null;
 
   get state => null;
