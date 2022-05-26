@@ -95,7 +95,7 @@ class Login extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Get.to(() => SignUp());
+                  Get.to(() => Signup());
                 },
                 child: RichText(
                     text: TextSpan(

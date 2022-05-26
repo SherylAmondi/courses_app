@@ -1,11 +1,22 @@
 import 'package:courses_app/ui/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
 
-void main() {
-  runApp(const MyApp(
-    
-  ));
+Future<void> main() async {
+  //--setting up parse initially at the main
+  //init widget binding for platform bridge
+  WidgetsFlutterBinding.ensureInitialized();
+
+  var keyParseApplicationId = "UbPmpCR8zC8nRJrBuC835TBEk8fVVGLtHAfA5tgO";
+  var keyParseServerUrl = "https://parseapi.back4app.com";
+  var keyParseClientKey = "hQH3aYZNlG8uX0ONLjBY24F3Yqhpin6VnFjxljeY";
+  var store = await CoreStoreSembastImp.getInstance(password: "Pwani");
+  await Parse().initialize(keyParseApplicationId, keyParseServerUrl,
+      clientKey: keyParseClientKey, autoSendSessionId: true, coreStore: store);
+  //--
+
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
